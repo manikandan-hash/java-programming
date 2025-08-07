@@ -7,14 +7,19 @@ import java.util.regex.*;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner obj = new Scanner(System.in);
-       int a = obj.nextInt();
-       if(a>0){
-           System.out.println("positive");
-       } else if(a<0){
-           System.out.println("negative");
-       } else{
-           System.out.println("zero");
-       }
+         Scanner obj = new Scanner(System.in);
+        int a = obj.nextInt();
+        if(a>=100 && a<=999){
+            int b = a/100;
+            int c = a%10;
+            if (b == c) {
+                System.out.println("palindrome");
+            } else {
+                System.out.println("not palindrome");
+            }
+        } else {
+            System.out.println("Invalid Input");
+        }
+       
     }
 }
