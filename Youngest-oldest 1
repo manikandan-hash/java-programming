@@ -4,10 +4,10 @@ public class PassengerAgeCheck {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        // Read number of passengers
+
         int n = scanner.nextInt();
 
-        // Check for invalid n
+
         if (n < 0) {
             System.out.println("Invalid Input");
             return;
@@ -16,7 +16,7 @@ public class PassengerAgeCheck {
         int[] ages = new int[n];
         boolean isValid = true;
 
-        // Read ages and check for any negative age
+
         for (int i = 0; i < n; i++) {
             ages[i] = scanner.nextInt();
             if (ages[i] < 0) {
@@ -29,11 +29,11 @@ public class PassengerAgeCheck {
             return;
         }
 
-        // Initialize min and max with first age
+
         int youngest = ages[0];
         int oldest = ages[0];
 
-        // Find youngest and oldest
+       
         for (int i = 1; i < n; i++) {
             if (ages[i] < youngest) {
                 youngest = ages[i];
@@ -43,7 +43,7 @@ public class PassengerAgeCheck {
             }
         }
 
-        // Print result
+
         System.out.println("Youngest=" + youngest);
         System.out.println("Oldest=" + oldest);
         
