@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    
+    static int sumUpToN(int m)
+    {
+        if (m == 1)
+        {
+            return 1; 
+        }
+        return m + sumUpToN(m - 1);
+    }
+
+    public static void main(String[] args)
+                            
+    {
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
+
+        if (m >= 1 && m <= 50) 
+        {
+            int sum = sumUpToN(m);
+            
+            System.out.printf("The sum of numbers from 1 to %d : %04d", m, sum);
+        } 
+        else
+        {
+            System.out.println("Enter a Valid Input!!!!!!!!!!!!!!!!!!");
+        }
+    }
+}
