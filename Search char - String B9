@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.next().charAt(0);  
+        String str = sc.next();         
+        boolean found = false;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ch) {
+                found = true;
+                break;
+            }
+        }
+        if (found)
+            System.out.println("Present");
+        else
+            System.out.println("Not Present");
+    }
+}
