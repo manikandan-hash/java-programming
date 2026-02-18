@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a = 0,rem; 
+        int b = 1;
+        while (n > 0) {
+            rem = n % 10;
+            if (rem % 2 == 0) {
+                a = a + rem;
+            } else {
+                b = b * rem;
+            }
+            n = n / 10;
+        }
+        System.out.println(a + " " + b);
+    }
+}
